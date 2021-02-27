@@ -1,11 +1,21 @@
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnInit, DoCheck } from '@angular/core';
+import {
+    Component,
+    Input,
+    Output,
+    EventEmitter,
+    OnChanges,
+    SimpleChanges,
+    OnInit,
+    DoCheck
+} from '@angular/core';
 
 import { Product } from '../product.model';
 
 // tslint:disable-next-line: no-conflicting-lifecycle
 @Component({
     selector: 'app-product',
-    templateUrl: './product.component.html'
+    templateUrl: './product.component.html',
+    styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements DoCheck {
 
@@ -18,23 +28,23 @@ export class ProductComponent implements DoCheck {
 
 
     //ngOnChanges(changes: SimpleChanges): void {
-     //   console.log('2. ngOnChanges');
-      //  console.log(changes);
-  //  }
+    //   console.log('2. ngOnChanges');
+    //  console.log(changes);
+    //  }
 
 
     ngOnInit(): void {
         console.log('3. ngOnInit');
     }
 
-    ngDoCheck(){
+    ngDoCheck() {
         console.log('4. ngDocheck');
 
     }
 
-ngOnDestroy(){
-    console.log('5. ngOnDestroy');
-}
+    ngOnDestroy() {
+        console.log('5. ngOnDestroy');
+    }
 
     addCart() {
         console.log('añadir al carrito');

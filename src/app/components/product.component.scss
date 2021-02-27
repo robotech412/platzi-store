@@ -1,0 +1,19 @@
+img {
+  max-width: 100%;
+}
+
+:host {
+  border: 1px solid black;
+  margin: 2px;
+  border-radius: 5px;
+  display: block;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+@media(min-width:576px){ //media query
+
+}
