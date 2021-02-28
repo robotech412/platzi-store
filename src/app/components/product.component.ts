@@ -22,10 +22,11 @@ export class ProductComponent implements DoCheck {
     @Input() product: Product;
     @Output() productClicked: EventEmitter<any> = new EventEmitter(); //any emitir cualquier valor
 
+    today= new Date();
+
     constructor() {
         console.log('1. constructor');
     }
-
 
     //ngOnChanges(changes: SimpleChanges): void {
     //   console.log('2. ngOnChanges');
