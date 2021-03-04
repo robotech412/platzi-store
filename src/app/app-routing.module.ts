@@ -5,7 +5,8 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { DemoComponent } from './demo/demo.component';
-import { PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
     component: ProductsComponent,
   },
   {
+    path: 'products/:id', // envio de parametro
+    component: ProductDetailComponent,
+  },
+  {
     path: 'contact',
     component: ContactComponent,
   },
@@ -31,7 +36,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component:PageNotFoundComponent,
+    component: PageNotFoundComponent,
   },
 ];
 
