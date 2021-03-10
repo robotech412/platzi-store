@@ -1,12 +1,9 @@
 import { Component, NgModule } from '@angular/core';
 import { PreloadAllModules, PreloadingStrategy, RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './contact/contact.component';
 
-import { ProductsComponent } from './products/products.component';
-import { DemoComponent } from './demo/demo.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { PageNotFoundComponent } from './page-not-found/components/page-not-found/page-not-found.component';
 import { LayoutComponent } from './layout/layout.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -23,25 +20,21 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        component: ProductsComponent,
-      },
-      {
-        path: 'products/:id', // envio de parametro
-        component: ProductDetailComponent,
+        loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
       },
       {
         path: 'contact',
-        component: ContactComponent,
+        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+      },
+      {
+        path: 'demo',
+        loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
       },
     ]
   },
   {
-    path: 'demo',
-    component: DemoComponent,
-  },
-  {
     path: '**',
-    component: PageNotFoundComponent,
+    loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
   },
 ];
 
