@@ -4,6 +4,8 @@ import { PreloadAllModules, PreloadingStrategy, RouterModule, Routes } from '@an
 import { PageNotFoundComponent } from './page-not-found/components/page-not-found/page-not-found.component';
 import { LayoutComponent } from './layout/layout.component';
 
+import { AdminGuard } from './admin.guard';
+
 const routes: Routes = [
   {
     path: '',
@@ -24,6 +26,7 @@ const routes: Routes = [
       },
       {
         path: 'contact',
+        canActivate: [AdminGuard],
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
       {
