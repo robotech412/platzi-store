@@ -31,7 +31,21 @@ export class ProductDetailComponent implements OnInit {
     this.productsService.getProduct(id)
       .subscribe(product => {
         this.product = product;
-    });
+      });
+  }
+
+  createProduct() {
+    const newProduct: Product = {
+      id: '222',
+      title: 'nuevo desde angular',
+      image: '/home/dennis/Escritorio/Cursos Udemy Platzi/Practicas Curso de Angular/platzi/platzi-store/src/assets/images/banner-1.jpg',
+      price: 3000,
+      description: 'nuevo producto'
+    };
+    this.productsService.createProduct(newProduct)
+      .subscribe(product => {
+        console.log(product);
+      });
   }
 
 }
