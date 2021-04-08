@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 // estos es para agregar localismos a nuestros pipes
 import { LOCALE_ID } from '@angular/core';
@@ -29,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     SharedModule,
     CoreModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
