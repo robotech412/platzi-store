@@ -6,18 +6,17 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { NavComponent } from './components/nav/nav.component';
-import { LayoutModule } from '@angular/cdk/layout';
 import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 import { AdminTableComponent } from './components/admin-table/admin-table.component';
+import { ProductsListComponent } from './components/products-list/products-list.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, DashboardAdminComponent, AdminTableComponent],
+  declarations: [ProductFormComponent, NavComponent, DashboardAdminComponent, AdminTableComponent, ProductsListComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
     ReactiveFormsModule,
-    MaterialModule,
-    LayoutModule
+    MaterialModule
   ]
 })
 export class AdminModule { }
