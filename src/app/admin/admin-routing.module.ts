@@ -36,9 +36,9 @@ const routes: Routes = [
         component:FormProductComponent
       },
       {
-        path: 'products/edit:id',
+        path: 'products/edit/:id',
         component:ProductEditComponent
-      }
+      },
     ]
   }
 ];
