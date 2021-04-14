@@ -18,8 +18,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
-import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatStepperModule } from '@angular/material/stepper';
 @NgModule({
   declarations: [],
   imports: [
@@ -40,6 +40,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatMenuModule,
     MatListModule,
     MatFormFieldModule,
+    MatStepperModule,
     LayoutModule
   ],
   exports: [
@@ -60,7 +61,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatMenuModule,
     MatListModule,
     MatFormFieldModule,
-    LayoutModule 
+    MatStepperModule,
+    LayoutModule
   ]
 })
 export class MaterialModule { }
